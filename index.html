@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#090b20">
+  <meta name="description" content="Compliment Jar — pull a sweet line about you, whenever you need one.">
+  <title>Compliment Jar ✦ Love for Mena</title>
+  <link rel="canonical" href="https://menaammarpro.github.io/love-compliments/">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Compliment Jar — for Mena">
+  <meta property="og:title" content="Compliment Jar ✦ Love for Mena">
+  <meta property="og:description" content="Pull a sweet line about you, whenever you need one.">
+  <meta property="og:url" content="https://menaammarpro.github.io/love-compliments/">
+  <meta property="og:image" content="https://menaammarpro.github.io/love-compliments/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Compliment Jar — a jar of sweet lines">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Compliment Jar ✦ Love for Mena">
+  <meta name="twitter:description" content="Pull a sweet line about you, whenever you need one.">
+  <meta name="twitter:image" content="https://menaammarpro.github.io/love-compliments/assets/og-image.png">
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/app.css">
+  <script src="js/theme-main.js" defer></script>
+  <script src="js/effects.js" defer></script>
+  <script src="js/app.js" defer></script>
+  <link rel="manifest" href="manifest.webmanifest">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Compliments">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/icons/icon-192.png">
+</head>
+<body>
+  <canvas id="starfield" aria-hidden="true"></canvas>
+
+  <header class="site-header">
+    <a class="brand" href="index.html">✻ Compliment Jar</a>
+    <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false">Menu</button>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a class="active" href="index.html">Home</a>
+      <a href="#jar">The jar</a>
+      <a href="#add">Add a line</a>
+      <a href="#details">Details</a>
+      <a href="https://menaammarpro.github.io/loveformymena/">Our little universe ↗</a>
+      <button class="theme-toggle" type="button" aria-label="Toggle color theme">Theme</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero jar-hero">
+      <p class="eyebrow">FOR THE DAYS YOU NEED IT</p>
+      <div class="moon" aria-hidden="true">✻</div>
+      <p class="small-caption">Full of things I mean, all of them about you.</p>
+      <h1>Compliment <span>jar.</span></h1>
+      <p class="hero-description">
+        Reach in and pull one out. It's never the same line twice in a row, and
+        there are always more where that came from — some from me, some you can
+        add yourself.
+      </p>
+      <div class="hero-actions">
+        <a class="button button-primary" href="#jar">Pull one out <span>♥</span></a>
+        <a class="button button-ghost" href="#add">Add a line</a>
+      </div>
+      <p class="signature">Made with love, just for you <span>♥</span></p>
+    </section>
+
+    <section class="section" id="jar">
+      <p class="eyebrow">REACH IN</p>
+      <h2>Pull a <span>line.</span></h2>
+
+      <div class="jar-stage">
+        <div class="jar" aria-hidden="true">
+          <div class="jar-lid"></div>
+          <div class="jar-body"></div>
+        </div>
+        <button class="button button-primary" id="jar-draw" type="button">Draw a compliment <span>♥</span></button>
+      </div>
+
+      <div class="jar-line" id="jar-line" hidden>
+        <p class="jar-line-text" id="line-text"></p>
+      </div>
+      <p class="jar-hint" id="jar-hint">One line at a time — press the button ♥</p>
+
+      <p class="section-note" id="save-note" aria-live="polite"></p>
+    </section>
+
+    <section class="section" id="add">
+      <p class="eyebrow">YOUR OWN WORDS</p>
+      <h2>Add a <span>line.</span></h2>
+      <div class="jar-meta">
+        <span class="diary-chip"><strong id="line-total">0</strong> lines in the jar</span>
+      </div>
+      <div class="jar-form">
+        <label class="field">
+          <span>Write something true</span>
+          <input type="text" id="add-text" maxlength="160" placeholder="The way you laugh before you've finished the joke" aria-label="Compliment">
+        </label>
+        <button class="button button-primary" id="add-line" type="button">Drop it in the jar <span>♥</span></button>
+      </div>
+      <div class="line-list" id="line-list"></div>
+    </section>
+
+    <section class="section" id="details">
+      <p class="eyebrow">JUST FOR US</p>
+      <h2>Details.</h2>
+      <div class="settings-actions">
+        <button class="button button-ghost" id="share-button" type="button">Share this page</button>
+        <button class="button button-ghost" id="reset-lines" type="button">Back to the original lines</button>
+      </div>
+      <p class="settings-note">Saved on this device only — no tracking, no network calls.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Made with care <span>♥</span> for Mena</p>
+    <p class="footer-small">A little universe of its own ✦</p>
+  </footer>
+</body>
+</html>
